@@ -635,29 +635,14 @@ footer img{
 /* === MEDIA QUERY PARA PCS === */
 
 @media (min-width: 1024px){ /* Luego de 1024px, se adapta para pc */
-
-    /* === Header === */
-
-    header{
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0.5rem 1rem;
-    }
-
-    /* Logo */
-
-    .header-logo{
-        width: 8rem;
-        padding-left: 0.5rem;
-    }
-
+    
     /* Menú de navegación */
 
     header nav ul{
         flex-direction: row;
         font-size: 1.25rem;
         gap: 1.5rem;
-        padding-right: 2rem;
+        padding-right: 1rem;
     }
 
     /* === INDEX === */
