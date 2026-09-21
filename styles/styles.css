@@ -288,7 +288,7 @@ h3{
 
 .titulo-proyectos{
     font-weight: 700;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: #FFFFFF;
     display: flex;
     text-align: center; /* Centramos el título de la sección de proyectos */
@@ -617,7 +617,7 @@ footer p{
     color: #CECDCD; /* Color ligeramente más claro para los derechos reservados */
     font-size: 0.85rem;
     text-align: center; /* Centramos el texto de los derechos reservados */
-    padding: 0.5rem 0 0.5rem 0; /* Separamos un poquito el texto de los derechos reservados del borde superior del footer tanto por arriba como por abajo */
+    padding: 0.5rem 0.10rem 0.5rem 0.10rem; /* Separamos un poquito el texto de derechos reservados de los bordes */
 }
 
 footer ul{
