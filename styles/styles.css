@@ -867,6 +867,10 @@ footer img{
 
     /* === CONTACTO === */
 
+    .pregunta-contacto h2, p{
+        text-align: center;
+    }
+
     /* Section */
 
     .section-contacto{
