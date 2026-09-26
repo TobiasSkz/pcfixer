@@ -1,0 +1,1014 @@
+/* ===================================================
+    PALETA DE COLORES - PC FIXER
+    - fondo-pagina: #311A5A (Violent Violet)
+    - color-nav: #925CF7 (Lavender Indigo)
+    - color-títulos: #FFFFFF (White)
+    - color-textos: #FAFAFA (Alabaster)
+    - color-letras-nav: #360194 (Blue gem)
+    - color-efectos: #5A00FF (Electric Indigo)
+    =================================================== */
+
+/* ============================================================================
+    - Aviso Se utilizaron 2 tipos de citas para remarcar conjuntos de estilos -
+
+    - === ESTILO === -> Conjunto de un contenedor
+    - ESTILO -> Una etiqueta específica
+
+    - Se reconstruyo desde 0 todo el CSS para hacer mobile first por lo que
+            algunas cosas quizá son diferentes a la anterior entrega.
+    ============================================================================ */
+
+/* === === === === === */
+
+/* RESET */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none; /* Borro el subrayado automático para ponerlo manualmente donde yo quiero */
+}
+
+/* === Estilos generales === */
+
+/* Color solido para el fondo de todas las paginas y tipo de fuente */
+
+body{
+    background-color: #311a5a; /* Color del fondo levemente más oscuro al blanco para evitar sofocación visual */
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #FAFAFA;
+}
+
+/* === Imagenes === */
+
+img {
+    max-width: 100%; /* Las imágenes nunca van a ocupar más espacio que su contenedor */
+}
+
+/* === Header === */
+
+header{
+    color: #360194;
+    background-color: #925cf7;
+    text-decoration: none;
+    width: 100%;
+}
+
+/* Menú de navegación */
+
+header nav ul {
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    color: #360194;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.6rem;
+    padding-right: 0;
+}
+
+/* Nav bar y hamburguesa de BS */
+
+.link-menu{ /* Para pisar bootstrap tenemos que reemplazar header nav ul li a en una clase propia nuestra */
+    color: #360194;
+    font-size: 1.35rem;
+    font-weight: bold; /* Más presencia porque son los "links" */
+    padding: 0.35rem; /* Espacio para separar el texto del borde */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    transition: all 0.5s ease; /* Transición de todos los elementos en 0.5 segundos y con efecto "ease" */
+    /* La transición siempre va en el padre, nunca en los efectos */
+}
+
+.link-menu:visited{
+    color: #360194; /* Mismo color que las "li" del navbar para no equivocar al usuario con cambios de colores */
+}
+
+.link-menu:hover{
+    background-color: #360194; /* Color del "rectángulo" que se le hace cuando le pasamos el puntero por encima */
+    color: #FAFAFA; /* Color de las li cuando se le pasa el puntero por encima */
+    text-decoration: underline; /* El texto se subrayará cuando se le pase el puntero por encima */
+}
+
+.link-menu:focus{
+    box-shadow: 0.5rem 0.5rem 1rem #311a5a; /* Sombra en la parte derecha inferior de cada elemento cuando se tabula  */
+}
+
+.link-menu:active{
+    text-decoration: underline; /* Cuando se hace clic (O se mantiene más bien dicho) se subraya el texto */
+}
+
+.hamburguesa{
+    color: #FAFAFA;
+    background-color: #28026b; /* Color del interior del menú */
+    border: 2px solid #FAFAFA;
+    border-radius: 0.5rem; /* Para continuar con el "toque estético" le ponemos borde redondo */
+    font-size: 1.75rem; /* Tamaño de la fuente de nuestro menú - En este caso, del ☰ */
+}
+
+/* === Main === */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* === Diferentes tipos de títulos === */
+
+h1{
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #FFFFFF;
+    display: flex;
+    margin-top: 1rem; /* Separamos el título principal del nav y de las sections */
+}
+
+h2{
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2rem;
+    color: #FFFFFF; 
+}
+
+h3{
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #FFFFFF; 
+}
+
+.section-index{
+    display: grid; /* Declaramos grid para poder usar sus propiedades */
+    padding: 1.25rem; /* Separamos el contenido de los bordes del contenedor */
+    grid-template-columns: 1fr; /* 1 columna */ 
+    grid-template-areas: "tarjeta1" "tarjeta2" "tarjeta3"; /* Declaramos 3 filas de igual tamaño */
+}
+
+/* Asignación de areas */
+
+.tarjeta1{
+    grid-area: tarjeta1;
+}
+
+.tarjeta2{
+    grid-area: tarjeta2;
+}
+
+.tarjeta3{
+    grid-area: tarjeta3;
+}
+
+/* === Tarjetas === */
+
+.tarjeta{
+    background-color: #925cf7;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+    font-weight: 400;
+    border-radius: 1rem; /* Estilo visual agradable */
+    margin-bottom: 1rem; /* Separamos las tarjetas entre sí */
+}
+
+.tarjeta h2{
+    font-size: 1.45rem;
+    padding-top: 0.5rem;
+    text-align: center; /* Centrar el título de la tarjeta */
+}
+
+.tarjeta img{
+    padding: 0 0.5rem; /* Separamos un poquito la imagen de los costados para centrar y dar efecto de que la imagen está dentro de la tarjeta */
+    border-radius: 1rem; /* Le ponemos el mismo estilo agradable a las imagenes para que concuerden */
+}
+
+.tarjeta p{
+    font-size: 1rem;
+}
+
+.tarjeta ul{
+    list-style-position: disc; /* Para colocar visualmente la sublista dentro de la lista */
+    padding-left: 1.25rem;
+    margin: 0;
+    width: 100%; /* Para que los "puntitos" de la lista ocupen el tamaño de su contenedor y no se salgan para afuera */
+}
+
+.tarjeta ul li ul{
+    list-style-type: none;
+    padding-left: 0.5rem; /* Pequeño espacio para denotar que las sublistas estan dentro de las listas */
+    font-size: 1rem;
+}
+
+.tarjeta ul li ul li{
+    padding: 0.25rem; /* Pequeña separación entre cada item dentro de la la lista de la sublista */
+}
+
+/* === SECTION NOSOTROS === */
+
+.section-nosotros{
+    display: grid; /* Declaramos grid para poder usar sus propiedades */
+    padding: 1.25rem; /* Separamos el contenido de los bordes del contenedor */
+    grid-template-columns: 1fr; /* 1 columna */ 
+    grid-template-areas: "nosotros1" "nosotros2" "nosotros3"; /* Declaramos 3 filas de igual tamaño */
+}
+
+/* Asignación de areas del grid */
+
+.nosotros1{
+    grid-area: nosotros1;
+}
+
+.nosotros2{
+    grid-area: nosotros2;
+}
+
+.nosotros3{
+    grid-area: nosotros3;
+}
+
+/* === Tarjetas de nosotros === */
+
+.tarjeta-nosotros{
+    background-color: #925cf7;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+    font-weight: 400;
+    border-radius: 1rem; /* Estilo visual agradable */
+    margin-bottom: 1rem; /* Separamos las tarjetas entre sí */
+}
+
+.tarjeta-nosotros h2{
+    font-size: 1.25rem;
+    padding-top: 0.5rem;
+    text-align: center; /* Centrar el título de la tarjeta */
+}
+
+.tarjeta-nosotros p{
+    font-size: 1rem;
+}
+
+/* === SECTION PROYECTOS === */
+
+.section-proyectos{
+    display: grid; /* Declaramos grid para poder usar sus propiedades */
+    padding: 1.25rem; /* Separamos el contenido de los bordes del contenedor */
+    grid-template-columns: 1fr; /* 1 columna */ 
+    grid-template-rows: auto auto auto auto; /* 4 filas de tamaño automático */
+    grid-template-areas: "proyectos1" "proyectos2" "proyectos3" "proyectos4"; /* Declaramos 4 filas de igual tamaño */
+}
+
+.proyectos1{
+    grid-area: proyectos1;
+}
+
+.proyectos2{
+    grid-area: proyectos2;
+}
+
+.proyectos3{
+    grid-area: proyectos3;
+}
+
+.proyectos4{
+    grid-area: proyectos4;
+}
+
+/* === Tarjetas de proyectos === */
+
+.titulo-proyectos{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    display: flex;
+    text-align: center; /* Centramos el título de la sección de proyectos */
+}
+
+.tarjeta-proyectos{
+    background-color: #925cf7;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+    font-weight: 400;
+    border-radius: 1rem; /* Estilo visual agradable */
+    margin-bottom: 1rem; /* Separamos las tarjetas entre sí */
+}
+
+.tarjeta-proyectos h2{
+    font-size: 1.25rem;
+    padding-top: 0.5rem;
+    text-align: center; /* Centrar el título de la tarjeta */
+}
+
+.tarjeta-proyectos img{
+    padding: 0 0.5rem; /* Separamos un poquito la imagen de los costados para centrar y dar efecto de que la imagen está dentro de la tarjeta */
+    border-radius: 1rem; /* Le ponemos el mismo estilo agradable a las imagenes para que concuerden */
+}
+
+.tarjeta-proyectos p{
+    font-size: 1rem;
+}
+
+/* === SECTION DE FAQ === */
+
+.section-faq{
+    display: grid; /* Declaramos grid para poder usar sus propiedades */
+    padding: 1.25rem; /* Separamos el contenido de los bordes del contenedor */
+    grid-template-columns: 1fr; /* 1 columna */ 
+    grid-template-areas: "faq1" "faq2" "faq3" "faq4"; /* Declaramos 4 filas de igual tamaño */
+}
+
+/* Asignación de cada area del grid */
+
+.faq1{
+    grid-area: faq1;
+}
+
+.faq2{
+    grid-area: faq2;
+}
+
+.faq3{
+    grid-area: faq3;
+}
+
+.faq4{
+    grid-area: faq4;
+}
+
+/* === Tarjetas del FAQ === */
+
+.titulo-faq{
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: #FFFFFF;
+    display: flex;
+    text-align: center; /* Centramos el título de la sección de proyectos */
+}
+
+.tarjeta-faq{
+    background-color: #925cf7;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.7rem;
+    font-weight: 400;
+    border-radius: 1rem; /* Estilo visual agradable */
+    margin-bottom: 1rem; /* Separamos las tarjetas entre sí */
+}
+
+.tarjeta-faq h2{
+    font-size: 1.4rem;
+    padding-top: 0.5rem;
+    text-align: center; /* Centrar el título de la tarjeta */
+}
+
+.tarjeta-faq p{
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.tarjeta-faq ul{
+    font-size: 1rem;
+    list-style-position: disc; /* Para colocar visualmente la sublista dentro de la lista */
+    padding-left: 1.25rem;
+    margin: 0;
+    width: 100%; /* Para que los "puntitos" de la lista ocupen el tamaño de su contenedor y no se salgan para afuera */
+}
+
+.tarjeta-faq ul li{
+    font-size: 1.2rem;
+    padding: 0.75rem; /* Pequeña separación entre cada item dentro de la la lista */
+    list-style: none;
+    text-align: center;
+    font-style: bold;
+    font-weight: 600;
+}
+
+/* === SECTION DE CONTACTO === */
+
+.pregunta-contacto h2, p{
+    text-align: center;
+}
+
+.section-contacto{
+    display: grid; /* Declaramos grid para poder usar sus propiedades */
+    padding: 2rem; /* Separamos el contenido de los bordes del contenedor */
+    grid-template-columns: 1fr; /* 1 columna */ 
+    grid-template-rows: auto auto; /* 2 filas de tamaño automático */
+    grid-template-areas: "contacto1" "contacto2"; /* Declaramos 2 filas de igual tamaño */
+}
+
+.contacto1{
+    grid-area: contacto1;
+}
+
+.contacto2{
+    grid-area: contacto2;
+}
+
+/* === Tarjetas de contacto === */
+
+.titulo-contacto{
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: #FFFFFF;
+    display: flex;
+    text-align: center; /* Centramos el título de la sección de proyectos */
+}
+
+.tarjeta-contacto h2{
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    text-align: center; /* Centrar el título de la tarjeta */
+}
+
+.tarjeta-contacto h3{
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    text-align: center; /* Centrar el título de la tarjeta */
+}
+
+.tarjeta-contacto{
+    background-color: #925cf7;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+    font-weight: 400;
+    border-radius: 1rem; /* Estilo visual agradable */
+    margin-bottom: 1rem; /* Separamos las tarjetas entre sí */
+}
+
+.tarjeta-contacto p{
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.tarjeta-contacto button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === Formulario === */
+
+fieldset{
+    font-family: 'Google Sans', sans-serif;
+    border: none; /* Le sacamos el borde feo que trae por defecto */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+legend{
+    font-weight: 500;
+    width: 100%; /* Para que ocupe toda la primera grilla */
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+fieldset label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    width: 100%; /* Para que entren 1 label por grilla */
+}
+
+/* === Figure antes del footer ===*/
+
+.figure-prefooter{
+    background-color: #925cf7;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
+    font-weight: 400;
+    border-radius: 1rem;
+    margin: 0 1rem 1rem 1rem; /* Separamos el figure del footer y de ambos costados */
+}
+
+.figure-prefooter h2{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem; /* Separamos un poquito el h2 de la imagen del figure */
+}
+
+.figure-prefooter p{
+    margin-bottom: 0.5rem; /* Separamos un poquito el párrafo de la imagen de figure */
+}
+
+.figure-prefooter img{
+    border-radius: 1rem; /* Mantenemos el estilo visual */
+}
+
+.figure-caption figcaption{
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #FAFAFA; 
+    font-style: italic;
+    margin-top: 0.5rem; /* Separamos un poquito la "leyenda" de la figure de entre la imagen y el borde */
+    text-align: center; /* Centramos la figcaption por comodidad visual y diseño de la página */
+}
+
+/* === Botones === */
+
+button{
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    background-color: #fefdff;
+    color: #5A00FF; /* Color de fuente del texto "Enviar" */
+    display: flex;
+    padding: 0.4rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    margin: 0.75rem 0 0.75rem 0; /* Siempre que haya un botón se va a alejar un poquito de lo que tenga alrededor */
+}
+
+/* Efecto de botones */
+
+button:hover{
+    background-color: #cfcfcf; /* Color casi transparente para que se note cuando tenes el cursor encima */
+}
+
+/* === Iframes (Mapa) === */
+
+iframe{
+    width: 95%; /* Tamaño un poco estirado para cubrir el tamaño de la tarjeta */
+    margin: 0.5rem; /* Separamos entre la figcaption y el borde de la tarjeta */
+    border-radius: 1rem; /* Seguimos manteniendo el estilo */
+}
+
+/* === CAROUSEL BS === */
+
+.tarjeta-carousel {
+    max-width: 70rem; /* Ancho de la tarjeta */
+    margin: 1.1rem auto; /* Centramos la tarjeta */
+    border: 1rem solid #925cf7; /* Color de la tarjeta igual al resto de tarjetas */
+    border-radius: 1rem; /* Esquinas redondeadas para mantener la estética */
+    overflow: hidden;
+    margin: 1.25rem; /* Separamos el carousel de los costados */
+}
+
+/* Hover de los botones de "anterior" y "siguiente */
+
+.carousel-control-prev, .carousel-control-next {
+    width: 10%; /* Ocupa solo el 10% */
+    transition: all 0.35s ease; /* Transición suave al pasar el puntero por encima */
+}
+
+/* Efectos */
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:focus{
+    background-color: rgba(98, 0, 234, 0.2);
+    opacity: 1;
+}
+
+/* Iconos de los botones de "anterior" y "siguiente" */
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: #6200ea;
+    border-radius: 50%; /* Hacemos circulares los botones */
+    padding: 1rem;
+    background-size: 50%;
+}
+
+/* === FOOTER === */
+
+footer{
+    color: #360194;
+    background-color: #925cf7;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+footer p{
+    font-weight: 400;
+    color: #CECDCD; /* Color ligeramente más claro para los derechos reservados */
+    font-size: 0.85rem;
+    text-align: center; /* Centramos el texto de los derechos reservados */
+    padding: 0.5rem 0.10rem 0.5rem 0.10rem; /* Separamos un poquito el texto de derechos reservados de los bordes */
+}
+
+footer ul{
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+    padding-bottom: 0.5rem; /* Separamos un poquito las redes del borde inferior del footer */
+}
+
+footer img{
+    width: 2.5rem; /* Tamaño de las imagenes redirigibles de redes */
+}
+
+/* === MEDIA QUERY PARA PCS === */
+
+@media (min-width: 1024px){ /* Luego de 1024px, se adapta para pc */
+    
+    /* Menú de navegación */
+
+    header nav ul{
+        flex-direction: row;
+        font-size: 1.25rem;
+        gap: 1.5rem;
+        padding-right: 1rem;
+    }
+
+    /* === INDEX === */
+
+    /* Section */
+
+    .section-index{
+        display: grid; /* Declaramos grid para poder usar sus propiedades */
+        grid-template-areas: "tarjeta1 tarjeta2 tarjeta3"; /* Declaramos 3 columnas de igual tamaño */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem; /* Espacio entre cada tarjeta */
+        padding-bottom: 0;
+    }
+
+    /* Asignación de cada tarjeta */
+
+    .tarjeta1{
+        grid-area: tarjeta1;
+    }
+
+    .tarjeta2{
+        grid-area: tarjeta2;
+    }
+
+    .tarjeta3{
+        grid-area: tarjeta3;
+    }
+
+    /* === Tarjetas === */
+
+    .tarjeta{
+        background-color: #925cf7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 1.25rem;
+        font-weight: 400;
+        border-radius: 1rem; /* Estilo visual agradable */
+        margin-bottom: 0;
+    }
+
+    .tarjeta h2{
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+    }
+
+    .tarjeta img{
+        padding: 0 0.5rem; /* Separamos un poquito la imagen de los costados para centrar y dar efecto de que la imagen está dentro de la tarjeta */
+        border-radius: 1rem; /* Le ponemos el mismo estilo agradable a las imagenes para que concuerden */
+    }
+
+    .tarjeta p{
+        font-size: 1rem;
+    }
+
+    .tarjeta ul{
+        font-size: 1rem;
+        list-style-position: disc; /* Para colocar visualmente la sublista dentro de la lista */
+        padding-left: 1.25rem;
+        margin: 0;
+        width: 100%; /* Para que los "puntitos" de la lista ocupen el tamaño de su contenedor y no se salgan para afuera */
+    }
+
+    .tarjeta ul li ul{
+        list-style-type: none;
+        padding-left: 0.5rem; /* Pequeño espacio para denotar que las sublistas estan dentro de las listas */
+        font-size: 1rem;
+    }
+
+    .tarjeta ul li ul li{
+        font-size: 1rem;
+        padding: 0.25rem; /* Pequeña separación entre cada item dentro de la la lista de la sublista */
+    }
+
+    /* === NOSOTROS === */
+
+    /* Section */
+
+    .section-nosotros{
+        display: grid; /* Declaramos grid para poder usar sus propiedades */
+        grid-template-areas: "nosotros1 nosotros2 nosotros3"; /* Declaramos 3 columnas de igual tamaño */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem; /* Espacio entre cada tarjeta */
+        padding-bottom: 0;
+    }
+
+    /* Asignación de cada tarjeta */
+
+    .nosotros1{
+        grid-area: nosotros1;
+    }
+
+    .nosotros2{
+        grid-area: nosotros2;
+    }
+
+    .nosotros3{
+        grid-area: nosotros3;
+    }
+
+    .tarjeta-nosotros{
+        background-color: #925cf7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 1.25rem;
+        font-weight: 400;
+        border-radius: 1rem; /* Estilo visual agradable */
+        margin-bottom: 0;
+    }    
+
+    .tarjeta-nosotros h2{
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+    }
+
+    .tarjeta-nosotros p{
+        font-size: 1rem;
+    }
+
+    /* === PROYECTOS === */
+
+    /* Section */
+
+    .section-proyectos{
+        display: grid; /* Declaramos grid para poder usar sus propiedades */
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto; /* 2 filas de tamaño automático */
+        grid-template-areas: 
+            "proyectos1 proyectos2" 
+            "proyectos3 proyectos4";
+        gap: 1.5rem; /* Espacio entre cada tarjeta */
+        padding-bottom: 0;
+    }
+
+    /* Asignación de areas del grid */
+
+    .proyectos1{
+        grid-area: proyectos1;
+    }
+
+    .proyectos2{
+        grid-area: proyectos2;
+    }
+
+    .proyectos3{
+        grid-area: proyectos3;
+    }
+
+    .proyectos4{
+        grid-area: proyectos4;
+    }
+
+    /* === FAQ === */
+
+    .section-faq{
+        display: grid; /* Declaramos grid para poder usar sus propiedades */
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-rows: auto auto; /* 2 filas de tamaño automático */
+        grid-template-areas: 
+            "faq1 faq2"
+            "faq3 faq4";
+        gap: 1.5rem; /* Espacio entre cada tarjeta */
+        padding-bottom: 0;
+    }    
+
+    /* Asignación de areas del grid */
+
+    .faq1{
+        grid-area: faq1;
+    }
+
+    .faq2{
+        grid-area: faq2;
+    }
+
+    .faq3{
+        grid-area: faq3;
+    }
+
+    .faq4{
+        grid-area: faq4;
+    }
+
+    /* Tarjetas del FAQ */
+
+    .tarjeta-faq{
+        width: 100%;
+        gap: 1rem;
+        padding: 1.25rem;
+        font-weight: 400;
+        border-radius: 1rem; /* Estilo visual agradable */
+    }
+
+    .tarjeta-faq h2{
+        font-size: 1.75rem;
+        padding-top: 0.5rem;
+    }
+
+    .tarjeta-faq ul{
+        font-size: 1.25rem;
+        list-style-position: disc; /* Para colocar visualmente la sublista dentro de la lista */
+        margin: 0;
+    }
+
+    .tarjeta-faq p{
+        font-size: 1rem;
+        margin: 0.4rem;
+    }
+
+    .tarjeta-faq ul li{
+        text-align: center; /* Centramos el texto */
+        list-style: none; /* Sacamos el puntito de la lista */
+        font-size: 1.4rem;
+    }
+
+    .tarjeta-faq ul li ul{
+        list-style-type: none;
+        padding-left: 0.5rem; /* Pequeño espacio para denotar que las sublistas estan dentro de las listas */
+        font-size: 1rem;
+    }
+
+    /* === CONTACTO === */
+
+    .pregunta-contacto h2, p{
+        text-align: center;
+    }
+
+    /* Section */
+
+    .section-contacto{
+        display: grid; /* Declaramos grid para poder usar sus propiedades */
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-areas: "contacto1 contacto2";
+        gap: 1.5rem; /* Espacio entre cada tarjeta */
+        padding-bottom: 0;
+    }
+
+    /* Asignación de areas del grid */
+
+    .contacto1{
+        grid-area: contacto1;
+    }
+
+    .contacto2{
+        grid-area: contacto2;
+    }
+
+    /* Tarjetas de contacto */
+
+    .tarjeta-contacto{
+        background-color: #925cf7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.25rem;
+        font-weight: 400;
+        border-radius: 1rem;
+        margin-bottom: 0;
+    }
+
+    .tarjeta-contacto h2{
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+    }
+
+    .tarjeta-contacto p{
+        font-size: 1.25rem;
+        margin: 0.15rem;
+    }
+
+    .tarjeta-contacto h3{
+        font-size: 1.35rem;
+        padding-top: 0.5rem;
+    }
+
+    .tarjeta-contacto ul{
+        font-size: 1.05rem;
+        list-style-position: disc; /* Para colocar visualmente la sublista dentro de la lista */
+        padding-left: 1.25rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    /* === FORMULARIO (No me gustó como me quedó pero no le encontré la vuelta para acomodarlo) === */
+
+    fieldset{
+        font-family: 'Google Sans', sans-serif;
+        border: none; /* Le sacamos el borde feo que trae por defecto */
+        display: flex;
+        flex-wrap: wrap; /* Hacemos de nuevo un formato tipo grillas */
+        gap: 1rem;
+        width: 100%;
+    }
+
+    legend{
+        font-weight: 500;
+        width: 100%; /* Para que ocupe toda la primera grilla */
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Alineamos 2 labels por grilla */
+
+    fieldset label{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+        width: 48%; /* El tamaño que ocupa por "reglón" cada label */
+    }
+
+    fieldset label.form-mensaje{
+        width: 100%;
+    }
+
+    fieldset button{
+        width: auto; /* Para que el botón no se estire */
+        margin: 0 auto; /* Centra horizontalmente */
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    /* Estilos de las casillas */
+
+    fieldset input, fieldset textarea{
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #FFFFFF;
+        border-radius: 0.5rem;
+    }
+
+    /* Tamaño del campo para escribir el mensaje */
+
+    fieldset textarea{
+        resize: vertical;
+        min-height: 80px;
+    }
+
+    /* === IFRAME === */
+
+    iframe{
+        width: 95%; 
+        margin: 0.5rem; 
+        border-radius: 1rem; 
+    }
+
+    /* === Footer === */
+
+    footer{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    footer p{
+        margin-left: 1rem;
+        font-size: 1.05rem;
+    }
+
+    footer ul{
+        margin-right: 1rem;
+        padding-bottom: 0;
+    }
+}
