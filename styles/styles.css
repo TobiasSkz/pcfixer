@@ -465,18 +465,15 @@ footer img {
   background-color: #925CF7;
   width: 100%;
 }
-
-h2 {
+.tarjeta-proyectos h2 {
   font-size: 1.25rem;
   padding-top: 0.5rem;
 }
-
-img {
+.tarjeta-proyectos img {
   padding: 0 0.5rem; /* Separamos un poquito la imagen de los costados para centrar y dar efecto de que la imagen está dentro de la tarjeta */
   border-radius: 1rem; /* Le ponemos el mismo estilo agradable a las imagenes para que concuerden */
 }
-
-p {
+.tarjeta-proyectos p {
   font-size: 1rem;
 }
 
@@ -517,28 +514,25 @@ p {
   width: 100%;
   text-align: center;
 }
-
-h2 {
+.tarjeta-faq h2 {
   font-size: 1.4rem;
   padding-top: 0.5rem;
   text-align: center; /* Centrar el título de la tarjeta */
 }
-
-p {
+.tarjeta-faq p {
   padding-top: 1rem;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
 }
-
-ul {
+.tarjeta-faq ul {
   font-size: 1rem;
   list-style-position: disc; /* Para colocar visualmente la sublista dentro de la lista */
   padding-left: 1.25rem;
   margin: 0;
   width: 100%; /* Para que los "puntitos" de la lista ocupen el tamaño de su contenedor y no se salgan para afuera */
 }
-ul ul li {
+.tarjeta-faq ul ul li {
   font-size: 1rem;
   padding: 0.75rem; /* Pequeña separación entre cada item dentro de la la lista */
   list-style: none;
