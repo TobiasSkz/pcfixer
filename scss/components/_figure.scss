@@ -1,0 +1,31 @@
+@use "../utilities/variables" as *;
+@use "../utilities/extend" as *;
+@use "../utilities/mixin" as *;
+
+
+.figure-prefooter{
+    @extend %figure-prefooter;
+
+    h2{
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem; /* Separamos un poquito el h2 de la imagen del figure */
+    }
+
+    p{
+        margin-bottom: 0.5rem; /* Separamos un poquito el párrafo de la imagen de figure */
+    }
+
+    img{
+        border-radius: 1rem; /* Mantenemos el estilo visual */
+    }
+}
+
+.figure-caption figcaption{
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #FAFAFA; 
+    font-style: italic;
+    margin-top: 0.5rem; /* Separamos un poquito la "leyenda" de la figure de entre la imagen y el borde */
+    text-align: center; /* Centramos la figcaption por comodidad visual y diseño de la página */
+}

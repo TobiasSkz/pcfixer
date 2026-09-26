@@ -96,12 +96,26 @@
     margin-bottom: 1rem; /* Separamos las tarjetas entre sí */
 }
 
+// Boton y form
+
 %boton-contacto{
     @include flex(null, center, center, null);
 }
 
 %form-label{
     @include flex(column, null, flex-start, 0.3rem);
+}
+
+// Figure pre-footer
+
+%figure-prefooter{
+    @include flex(column, null, center, 0.5rem);
+    background-color: $color-nav;
+    text-align: center;
+    padding: 1.25rem;
+    font-weight: 400;
+    border-radius: 1rem;
+    margin: 0 1rem 1rem 1rem; /* Separamos el figure del footer y de ambos costados */
 }
 
 // Footer

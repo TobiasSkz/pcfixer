@@ -133,6 +133,19 @@ label {
   gap: 0.3rem;
 }
 
+.figure-prefooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #925CF7;
+  text-align: center;
+  padding: 1.25rem;
+  font-weight: 400;
+  border-radius: 1rem;
+  margin: 0 1rem 1rem 1rem; /* Separamos el figure del footer y de ambos costados */
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -687,6 +700,27 @@ legend {
   border-radius: 50%; /* Hacemos circulares los botones */
   padding: 1rem;
   background-size: 50%;
+}
+
+.figure-prefooter h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem; /* Separamos un poquito el h2 de la imagen del figure */
+}
+.figure-prefooter p {
+  margin-bottom: 0.5rem; /* Separamos un poquito el párrafo de la imagen de figure */
+}
+.figure-prefooter img {
+  border-radius: 1rem; /* Mantenemos el estilo visual */
+}
+
+.figure-caption figcaption {
+  font-family: "Google Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #FAFAFA;
+  font-style: italic;
+  margin-top: 0.5rem; /* Separamos un poquito la "leyenda" de la figure de entre la imagen y el borde */
+  text-align: center; /* Centramos la figcaption por comodidad visual y diseño de la página */
 }
 
 /*# sourceMappingURL=styles.css.map */
