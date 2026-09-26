@@ -1,4 +1,24 @@
 @charset "UTF-8";
+header {
+  color: #360194;
+  background-color: #925CF7;
+  width: 100%;
+  text-decoration: none;
+}
+
+header nav ul {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  list-style: none;
+  color: #FAFAFA;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-right: 0.5rem;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -17,6 +37,34 @@ body {
 
 img {
   max-width: 100%;
+}
+
+.link-menu {
+  color: #360194;
+  font-size: 1.35rem;
+  font-weight: bold;
+  padding: 0.35rem;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease;
+}
+.link-menu:visited {
+  color: #360194;
+}
+.link-menu:hover {
+  background-color: #360194;
+  color: #FAFAFA;
+  text-decoration: underline;
+}
+.link-menu:focus {
+  box-shadow: 0.5rem 0.5rem 1rem #311a5a;
+}
+
+.hamburguesa {
+  color: #FAFAFA;
+  background-color: #28026b; /* Color del interior del menú */
+  border: 2px solid #FAFAFA;
+  border-radius: 0.5rem;
+  font-size: 1.75rem; /* Tamaño de la fuente de nuestro menú - En este caso, del ☰ */
 }
 
 /*# sourceMappingURL=styles.css.map */

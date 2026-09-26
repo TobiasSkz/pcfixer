@@ -1,0 +1,44 @@
+@use "../utilities/variables" as *;
+@use "../utilities/extend" as *;
+@use "../utilities/mixin" as *;
+
+header{
+    @extend %barra-nav;
+
+    nav ul{
+        @extend %lista-nav;
+    }
+}
+
+.link-menu{
+    color: $color-letras-nav;
+    font-size: 1.35rem;
+    font-weight: bold;
+    padding: 0.35rem;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease;
+
+
+    &:visited{
+        color: $color-letras-nav;
+    }
+
+    &:hover{
+        background-color: $color-letras-nav;
+        color: $color-textos;
+        text-decoration: underline;
+    }
+
+    &:focus{
+        box-shadow: 0.5rem 0.5rem 1rem #311a5a;
+    }
+}
+
+.hamburguesa{
+    color: $color-textos;
+    background-color: $color-hamburguesa; /* Color del interior del menú */
+    border: 2px solid $color-textos;
+    border-radius: 0.5rem;
+    font-size: 1.75rem; /* Tamaño de la fuente de nuestro menú - En este caso, del ☰ */
+}
+
