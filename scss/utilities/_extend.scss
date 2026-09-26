@@ -27,11 +27,82 @@
     @include flex(column, null, center, 1rem);
 }
 
+// Sections
+
 %section-index{
-    @include grid(1fr, 3, "tarjeta1" "tarjeta2" "tarjeta3", null);
+    @include grid(1fr, 3, "tarjeta1" "tarjeta2" "tarjeta3", 0.5rem);
     padding: 1.25rem; /* Separamos el contenido de los bordes del contenedor */
 }
 
+%section-nosotros{
+    @include grid(1fr, 3, "nosotros1" "nosotros2" "nosotros3", 0.5rem);
+    padding: 1.25rem;
+}
+
+%section-proyectos{
+    @include grid(1fr, repeat(4, auto), "proyectos1" "proyectos2" "proyectos3" "proyectos4", 1rem);
+    padding: 1.25rem;
+}
+
+%section-faq{
+    @include grid(1fr, 4, "faq1" "faq2" "faq3" "faq4", 1rem);
+    padding: 1.25rem;
+}
+
+%section-contacto{
+    @include grid(1fr, auto auto, "contacto1" "contacto2", 1.5rem);
+    padding: 2rem; /* Separamos el contenido de los bordes del contenedor */
+}
+
+// Tarjetas
+
+%tarjetas-index{
+    @include flex(column, null, null, 1rem);
+    padding: 1.25rem;
+    font-weight: 400;
+    border-radius: 1rem; /* Estilo visual agradable */
+    margin-bottom: 1rem; /* Separamos las tarjetas entre sí */
+}
+
+%tarjetas-nosotros{
+    @include flex(column, null, null, 1rem);
+    padding: 1.25rem;
+    font-weight: 400;
+    border-radius: 1rem; /* Estilo visual agradable */
+    margin-bottom: 1rem; /* Separamos las tarjetas entre sí */
+}
+
+%tarjetas-proyectos{
+    @include flex(column, null, null, 1rem);
+    padding: 1.25rem;
+    font-weight: 400;
+    border-radius: 1rem; /* Estilo visual agradable */
+    margin-bottom: 1rem; /* Separamos las tarjetas entre sí */
+}
+
+%tarjetas-faq{
+    @include flex(column, null, null, null);
+    padding: 1.25rem;
+    font-weight: 400;
+    border-radius: 1rem; /* Estilo visual agradable */
+    margin-bottom: 1rem; /* Separamos las tarjetas entre sí */
+}
+
+%tarjetas-contacto{
+    @include flex(column, null, null, 0.5rem);
+    padding: 1.25rem;
+    font-weight: 400;
+    border-radius: 1rem; /* Estilo visual agradable */
+    margin-bottom: 1rem; /* Separamos las tarjetas entre sí */
+}
+
+%boton-contacto{
+    @include flex(null, center, center, null);
+}
+
+%form-label{
+    @include flex(column, null, flex-start, 0.3rem);
+}
 
 // Footer
 
@@ -44,4 +115,3 @@
     list-style: none;
     padding-bottom: 0.5rem; /* Separamos un poquito las redes del borde inferior del footer */
 }
-

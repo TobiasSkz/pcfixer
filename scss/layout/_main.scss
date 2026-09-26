@@ -31,6 +31,11 @@ h3{
     color: $color-titulos; 
 }
 
+// === SECTIONS ===
+
+// Index
+
+
 .section-index{
     @extend %section-index;
 }
@@ -47,4 +52,86 @@ h3{
 
 .tarjeta3{
     grid-area: tarjeta3;
+}
+
+// Nosotros
+
+.section-nosotros{
+    @extend %section-nosotros;
+}
+
+/* Asignación de areas del grid */
+
+.nosotros1{
+    grid-area: nosotros1;
+}
+
+.nosotros2{
+    grid-area: nosotros2;
+}
+
+.nosotros3{
+    grid-area: nosotros3;
+}
+
+// Proyectos
+
+.section-proyectos{
+    @extend %section-proyectos;
+}
+
+.proyectos1{
+    grid-area: proyectos1;
+}
+
+.proyectos2{
+    grid-area: proyectos2;
+}
+
+.proyectos3{
+    grid-area: proyectos3;
+}
+
+.proyectos4{
+    grid-area: proyectos4;
+}
+
+// FAQ
+
+.section-faq{
+    @extend %section-faq;
+}
+
+/* Asignación de cada area del grid */
+
+.faq1{
+    grid-area: faq1;
+}
+
+.faq2{
+    grid-area: faq2;
+}
+
+.faq3{
+    grid-area: faq3;
+}
+
+.faq4{
+    grid-area: faq4;
+}
+
+// Contacto
+
+.section-contacto{
+    @extend %section-contacto;
+}
+
+/* Asignación de cada area del grid */
+
+.contacto1{
+    grid-area: contacto1;
+}
+
+.contacto2{
+    grid-area: contacto2;
 }

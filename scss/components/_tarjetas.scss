@@ -1,0 +1,218 @@
+@use "../utilities/variables" as *;
+@use "../utilities/extend" as *;
+@use "../utilities/mixin" as *;
+
+// Tarjetas de index
+
+.tarjeta{
+    background-color: $color-nav;
+    width: 100%;
+    @extend %tarjetas-index;
+
+    h2{
+        font-size: 1.45rem;
+        padding-top: 0.5rem;
+    }
+
+    img{
+        padding: 0 0.5rem; /* Separamos un poquito la imagen de los costados para centrar y dar efecto de que la imagen está dentro de la tarjeta */
+        border-radius: 1rem; /* Le ponemos el mismo estilo agradable a las imagenes para que concuerden */
+    }
+
+    p{
+        font-size: 1rem;
+    }
+
+    ul{ /* Lista principal */
+        list-style-position: disc; /* Para colocar visualmente la sublista dentro de la lista */
+        padding-left: 1.25rem;
+        margin: 0;
+        width: 100%; /* Para que los "puntitos" de la lista ocupen el tamaño de su contenedor y no se salgan para afuera */
+    }
+
+        ul{ /* sublista */
+            list-style-type: none;
+            padding-left: 0.5rem; /* Pequeño espacio para denotar que las sublistas estan dentro de las listas */
+            font-size: 1rem;
+        }
+
+            li{
+                padding: 0.25rem; /* Pequeña separación entre cada item dentro de la la lista de la sublista */
+            }
+        }
+
+.section-index{
+    @media (min-width: 1024px){
+            @include index-pc;
+        }
+    }
+
+// Tarjetas de nosotros
+
+.tarjeta-nosotros{
+    background-color: $color-nav;
+    width: 100%;
+    @extend %tarjetas-nosotros;
+
+    h2{
+        font-size: 1.25rem;
+        padding-top: 0.5rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+}
+
+.section-nosotros{
+        @media (min-width: 1024px){
+            @include nosotros-pc;
+    }
+}
+
+// Tarjetas de proyectos
+
+.tarjeta-proyectos{
+    background-color: $color-nav;
+    width: 100%;
+    @extend %tarjetas-proyectos;
+}
+
+    h2{
+        font-size: 1.25rem;
+        padding-top: 0.5rem;
+    }
+
+    img{
+        padding: 0 0.5rem; /* Separamos un poquito la imagen de los costados para centrar y dar efecto de que la imagen está dentro de la tarjeta */
+        border-radius: 1rem; /* Le ponemos el mismo estilo agradable a las imagenes para que concuerden */
+    }
+
+    p{
+        font-size: 1rem;
+    }
+
+.section-proyectos{
+        @media (min-width: 1024px){
+            @include proyectos-pc;
+    }
+}
+
+// Tarjetas del FAQ
+
+.titulo-faq{
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: $color-titulos;
+    display: flex;
+    text-align: center; /* Centramos el título de la sección de proyectos */
+}
+
+.tarjeta-faq{
+    background-color: $color-nav;
+    width: 100%;
+    @extend %tarjetas-faq;
+    text-align: center;
+}
+
+    h2{
+        font-size: 1.4rem;
+        padding-top: 0.5rem;
+        text-align: center; /* Centrar el título de la tarjeta */
+    }
+
+    p{
+        padding-top: 1rem;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    ul{
+        font-size: 1rem;
+        list-style-position: disc; /* Para colocar visualmente la sublista dentro de la lista */
+        padding-left: 1.25rem;
+        margin: 0;
+        width: 100%; /* Para que los "puntitos" de la lista ocupen el tamaño de su contenedor y no se salgan para afuera */
+
+        li{
+            font-size: 1.2rem;
+            padding: 0.75rem; /* Pequeña separación entre cada item dentro de la la lista */
+            list-style: none;
+            font-style: bold;
+            font-weight: 600;
+        }
+    }
+
+.section-faq{
+        @media (min-width: 1024px){
+            @include faq-pc;
+    }
+}
+
+// Tarjetas de contacto
+
+.titulo-contacto{
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: $color-titulos;
+    display: flex;
+    text-align: center; /* Centramos el título de la sección de proyectos */
+    padding: 0.5rem; /* Separamos el título de los costados */
+}
+
+    h2{
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+    }
+
+.tarjeta-contacto{
+    background-color: $color-nav;
+    width: 100%;
+    text-align: center;
+    @extend %tarjetas-contacto;
+}
+
+    p{
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    button{
+        @extend %boton-contacto;
+    }
+
+// Formulario
+
+fieldset{
+    font-family: 'Google Sans', sans-serif;
+    border: none; /* Le sacamos el borde feo que trae por defecto */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+    label{
+        @extend %form-label;
+        width: 100%; /* Para que entren 1 label por grilla */
+}
+
+
+legend{
+    font-weight: 500;
+    width: 100%; /* Para que ocupe toda la primera grilla */
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-contacto{
+        @media (min-width: 1024px){
+            @include contacto-pc;
+    }
+}

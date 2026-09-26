@@ -25,17 +25,17 @@ footer {
         width: 2.5rem;
     }
 
-    @media (min-width: 1024px) {
-        @include footer-pc;
+@media (min-width: 1024px) {
+    @include footer-pc;
 
-        p {
-            margin-left: 1rem;
-            font-size: 1.05rem;
-        }
+    p{
+        margin-left: 1rem;
+        font-size: 1.05rem;
+    }
 
-        ul {
-            margin-right: 1rem;
-            padding-bottom: 0;
-        }
+    ul {
+        margin-right: 1rem;
+        padding-bottom: 0;
+    }
     }
 }
