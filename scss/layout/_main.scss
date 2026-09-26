@@ -6,7 +6,7 @@ main{
     @extend %main;
 }
 
-/* === Diferentes tipos de títulos === */
+// === Diferentes tipos de titulos ===
 
 h1{
     font-weight: 700;
@@ -31,6 +31,29 @@ h3{
     color: $color-titulos; 
 }
 
+// Botón
+
+button{
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    background-color: $color-fondo-boton;
+    color: $color-efectos; /* Color de fuente del texto "Enviar" */
+    display: flex;
+    padding: 0.4rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    margin: 0.75rem 0 0.75rem 0; /* Siempre que haya un botón se va a alejar un poquito de lo que tenga alrededor */
+}
+
+// Efecto de botones
+
+button:hover{
+    background-color: $color-efecto-boton; /* Color casi transparente para que se note cuando tenes el cursor encima */
+}
+
 // === SECTIONS ===
 
 // Index
@@ -40,7 +63,7 @@ h3{
     @extend %section-index;
 }
 
-/* Asignación de areas */
+// Asignación de áreas
 
 .tarjeta1{
     grid-area: tarjeta1;
@@ -60,7 +83,7 @@ h3{
     @extend %section-nosotros;
 }
 
-/* Asignación de areas del grid */
+// Asignación de áreas
 
 .nosotros1{
     grid-area: nosotros1;
@@ -79,6 +102,8 @@ h3{
 .section-proyectos{
     @extend %section-proyectos;
 }
+
+// Asginación de áreas
 
 .proyectos1{
     grid-area: proyectos1;
@@ -102,7 +127,7 @@ h3{
     @extend %section-faq;
 }
 
-/* Asignación de cada area del grid */
+// Asignación de áreas
 
 .faq1{
     grid-area: faq1;
@@ -126,7 +151,7 @@ h3{
     @extend %section-contacto;
 }
 
-/* Asignación de cada area del grid */
+// Asignación de áreas
 
 .contacto1{
     grid-area: contacto1;

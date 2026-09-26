@@ -1,0 +1,39 @@
+@use "../utilities/variables" as *;
+@use "../utilities/extend" as *;
+@use "../utilities/mixin" as *;
+
+.tarjeta-carousel {
+    max-width: 70rem; /* Ancho de la tarjeta */
+    margin: 1.25rem auto; /* Centramos la tarjeta */
+    border: 1rem solid $color-nav; /* Color de la tarjeta igual al resto de tarjetas */
+    border-radius: 1rem; /* Esquinas redondeadas para mantener la estética */
+    overflow: hidden;
+    margin: 1rem; /* Separamos el carousel de los costados */
+}
+
+/* Hover de los botones de "anterior" y "siguiente */
+
+.carousel-control-prev, .carousel-control-next {
+    width: 10%; /* Ocupa solo el 10% */
+    transition: all 0.35s ease; /* Transición suave al pasar el puntero por encima */
+}
+
+/* Efectos */
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:focus{
+    background-color: rgba(98, 0, 234, 0.2);
+    opacity: 1;
+}
+
+/* Iconos de los botones de "anterior" y "siguiente" */
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: $carousel-botones;
+    border-radius: 50%; /* Hacemos circulares los botones */
+    padding: 1rem;
+    background-size: 50%;
+}
+

@@ -205,7 +205,6 @@ img {
   }
 }
 
-/* === Diferentes tipos de títulos === */
 h1 {
   font-weight: 700;
   font-size: 1.75rem;
@@ -229,7 +228,25 @@ h3 {
   color: #FFFFFF;
 }
 
-/* Asignación de areas */
+button {
+  font-family: "Google Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  background-color: #fefdff;
+  color: #5A00FF; /* Color de fuente del texto "Enviar" */
+  display: flex;
+  padding: 0.4rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  margin: 0.75rem 0 0.75rem 0; /* Siempre que haya un botón se va a alejar un poquito de lo que tenga alrededor */
+}
+
+button:hover {
+  background-color: #cfcfcf; /* Color casi transparente para que se note cuando tenes el cursor encima */
+}
+
 .tarjeta1 {
   grid-area: tarjeta1;
 }
@@ -242,7 +259,6 @@ h3 {
   grid-area: tarjeta3;
 }
 
-/* Asignación de areas del grid */
 .nosotros1 {
   grid-area: nosotros1;
 }
@@ -271,7 +287,6 @@ h3 {
   grid-area: proyectos4;
 }
 
-/* Asignación de cada area del grid */
 .faq1 {
   grid-area: faq1;
 }
@@ -288,7 +303,6 @@ h3 {
   grid-area: faq4;
 }
 
-/* Asignación de cada area del grid */
 .contacto1 {
   grid-area: contacto1;
 }
@@ -494,12 +508,12 @@ ul {
   margin: 0;
   width: 100%; /* Para que los "puntitos" de la lista ocupen el tamaño de su contenedor y no se salgan para afuera */
 }
-ul li {
-  font-size: 1.2rem;
+ul ul li {
+  font-size: 1rem;
   padding: 0.75rem; /* Pequeña separación entre cada item dentro de la la lista */
   list-style: none;
   font-style: bold;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 @media (min-width: 1024px) {
@@ -641,6 +655,38 @@ legend {
     resize: vertical;
     min-height: 80px;
   }
+}
+
+.tarjeta-carousel {
+  max-width: 70rem; /* Ancho de la tarjeta */
+  margin: 1.25rem auto; /* Centramos la tarjeta */
+  border: 1rem solid #925CF7; /* Color de la tarjeta igual al resto de tarjetas */
+  border-radius: 1rem; /* Esquinas redondeadas para mantener la estética */
+  overflow: hidden;
+  margin: 1rem; /* Separamos el carousel de los costados */
+}
+
+/* Hover de los botones de "anterior" y "siguiente */
+.carousel-control-prev, .carousel-control-next {
+  width: 10%; /* Ocupa solo el 10% */
+  transition: all 0.35s ease; /* Transición suave al pasar el puntero por encima */
+}
+
+/* Efectos */
+.carousel-control-prev:hover,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  background-color: rgba(98, 0, 234, 0.2);
+  opacity: 1;
+}
+
+/* Iconos de los botones de "anterior" y "siguiente" */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #6200ea;
+  border-radius: 50%; /* Hacemos circulares los botones */
+  padding: 1rem;
+  background-size: 50%;
 }
 
 /*# sourceMappingURL=styles.css.map */
