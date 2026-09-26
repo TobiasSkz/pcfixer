@@ -1,7 +1,7 @@
 @use "variables" as *;
 @use "mixin" as *;
 
-// Se le puede poner el nombre que quiera
+// Header - Nav
 
 %barra-nav{
     color: $color-letras-nav;
@@ -20,6 +20,20 @@
     @include flex(row, center, null, 0.6rem);
     margin-right: 0.5rem;
 }
+
+// Main
+
+%main{
+    @include flex(column, null, center, 1rem);
+}
+
+%section-index{
+    @include grid(1fr, 3, "tarjeta1" "tarjeta2" "tarjeta3", null);
+    padding: 1.25rem; /* Separamos el contenido de los bordes del contenedor */
+}
+
+
+// Footer
 
 %footer{
     @include flex(column, center, center, null);
