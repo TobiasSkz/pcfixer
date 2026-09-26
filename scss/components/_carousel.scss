@@ -5,10 +5,19 @@
 .tarjeta-carousel {
     max-width: 70rem; /* Ancho de la tarjeta */
     margin: 1.25rem auto; /* Centramos la tarjeta */
+    background-color: $color-nav;
     border: 1rem solid $color-nav; /* Color de la tarjeta igual al resto de tarjetas */
     border-radius: 1rem; /* Esquinas redondeadas para mantener la estética */
     overflow: hidden;
     margin: 1rem; /* Separamos el carousel de los costados */
+
+        h2{
+            text-align: center;
+        }
+        
+        p{
+            text-align: center;
+        }
 }
 
 /* Hover de los botones de "anterior" y "siguiente */

@@ -183,6 +183,23 @@ img {
   max-width: 100%;
 }
 
+@media (min-width: 1024px) {
+  header nav {
+    width: 100%;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    padding-right: 1rem;
+    font-size: 1.25rem;
+    width: 100%;
+    margin: 0;
+  }
+}
+
 .hamburguesa {
   color: #FAFAFA;
   background-color: #28026b; /* Color del interior del menú */
@@ -209,15 +226,6 @@ img {
 }
 .link-menu:focus {
   box-shadow: 0.5rem 0.5rem 1rem #311a5a;
-}
-@media (min-width: 1024px) {
-  .link-menu header nav ul {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    padding-right: 1rem;
-    font-size: 1.25rem;
-  }
 }
 
 h1 {
@@ -682,10 +690,17 @@ legend {
 .tarjeta-carousel {
   max-width: 70rem; /* Ancho de la tarjeta */
   margin: 1.25rem auto; /* Centramos la tarjeta */
+  background-color: #925CF7;
   border: 1rem solid #925CF7; /* Color de la tarjeta igual al resto de tarjetas */
   border-radius: 1rem; /* Esquinas redondeadas para mantener la estética */
   overflow: hidden;
   margin: 1rem; /* Separamos el carousel de los costados */
+}
+.tarjeta-carousel h2 {
+  text-align: center;
+}
+.tarjeta-carousel p {
+  text-align: center;
 }
 
 /* Hover de los botones de "anterior" y "siguiente */

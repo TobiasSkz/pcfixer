@@ -8,6 +8,17 @@ header{
     nav ul{
         @extend %lista-nav;
     }
+
+    @media (min-width: 1024px){
+        nav{
+            width: 100%;
+        }
+
+        nav ul{
+            @include header-pc;
+            margin: 0;
+        }
+    }
 }
 
 .hamburguesa{
@@ -39,11 +50,5 @@ header{
 
     &:focus{
         box-shadow: 0.5rem 0.5rem 1rem #311a5a;
-    }
-
-    @media (min-width: 1024px){
-        header nav ul{
-            @include header-pc;
-        }
     }
 }
