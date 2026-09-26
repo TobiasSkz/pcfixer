@@ -1,0 +1,12 @@
+@use "utilities/variables";
+@use "utilities/extend";
+@use "utilities/mixin";
+
+@use "base/reseteo";
+@use "base/generales";
+
+@use "layout/header";
+@use "layout/main";
+@use "layout/footer";
+
+@use "components/tarjetas";

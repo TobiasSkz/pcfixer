@@ -1,0 +1,16 @@
+@use "../utilities/variables" as *;
+@use "../utilities/extend" as *;
+@use "../utilities/mixin" as *;  // No usamos extend y mixin pero los llamamos por si a futuro lo necesitamos
+
+body{
+    background-color: $fondo-pagina;
+    font-family: $fuente;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: $color-textos;
+}
+
+img{
+    max-width: 100%;
+}
