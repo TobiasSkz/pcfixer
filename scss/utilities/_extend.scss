@@ -20,3 +20,14 @@
     @include flex(row, center, null, 0.6rem);
     margin-right: 0.5rem;
 }
+
+%footer{
+    @include flex(column, center, center, null);
+}
+
+%footer-ul{
+    @include flex(null, null, center, 1.5rem);
+    list-style: none;
+    padding-bottom: 0.5rem; /* Separamos un poquito las redes del borde inferior del footer */
+}
+

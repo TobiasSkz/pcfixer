@@ -19,6 +19,21 @@ header nav ul {
   margin-right: 0.5rem;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding-bottom: 0.5rem; /* Separamos un poquito las redes del borde inferior del footer */
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -37,6 +52,14 @@ body {
 
 img {
   max-width: 100%;
+}
+
+.hamburguesa {
+  color: #FAFAFA;
+  background-color: #28026b; /* Color del interior del menú */
+  border: 2px solid #FAFAFA;
+  border-radius: 0.5rem;
+  font-size: 1.75rem; /* Tamaño de la fuente de nuestro menú - En este caso, del ☰ */
 }
 
 .link-menu {
@@ -58,13 +81,51 @@ img {
 .link-menu:focus {
   box-shadow: 0.5rem 0.5rem 1rem #311a5a;
 }
+@media (min-width: 1024px) {
+  .link-menu header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding-right: 1rem;
+    font-size: 1.25rem;
+  }
+}
 
-.hamburguesa {
-  color: #FAFAFA;
-  background-color: #28026b; /* Color del interior del menú */
-  border: 2px solid #FAFAFA;
-  border-radius: 0.5rem;
-  font-size: 1.75rem; /* Tamaño de la fuente de nuestro menú - En este caso, del ☰ */
+footer {
+  background-color: #925CF7;
+  text-decoration: none;
+  width: 100%;
+  border-radius: 1rem;
+}
+footer p {
+  font-weight: 400;
+  color: #CECDCD;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0.5rem 0.1rem 0.5rem 0.1rem;
+}
+footer img {
+  width: 2.5rem;
+}
+@media (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    text-decoration: none;
+    width: 100%;
+    border-radius: 1rem;
+  }
+  footer p {
+    margin-left: 1rem;
+    font-size: 1.05rem;
+  }
+  footer ul {
+    margin-right: 1rem;
+    padding-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
