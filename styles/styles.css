@@ -218,6 +218,11 @@ img {
 .logo-navbar:hover {
   transform: scale(1.1);
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logo-navbar {
+    width: 400px;
+  }
+}
 
 .hamburguesa {
   color: #FAFAFA;
@@ -225,6 +230,11 @@ img {
   border: 2px solid #FAFAFA;
   border-radius: 0.5rem;
   font-size: 1.75rem; /* Tamaño de la fuente de nuestro menú - En este caso, del ☰ */
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hamburguesa {
+    font-size: 3rem;
+  }
 }
 
 .link-menu {
@@ -234,6 +244,12 @@ img {
   padding: 0.35rem;
   border-radius: 0.5rem;
   transition: all 0.5s ease;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .link-menu {
+    font-size: 2rem;
+    padding: 0.6rem 1rem;
+  }
 }
 .link-menu:visited {
   color: #360194;
@@ -253,6 +269,11 @@ h1 {
   color: #FFFFFF;
   text-align: center;
   margin-top: 1.5rem; /* Separamos el título principal del nav y de las sections */
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 2.5rem;
+  }
 }
 
 h2 {
@@ -387,6 +408,14 @@ footer img:hover {
 footer img:active {
   transform: scale(0.8);
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  footer p {
+    font-size: 1.5rem;
+  }
+  footer img {
+    width: 3rem;
+  }
+}
 @media (min-width: 1024px) {
   footer {
     display: flex;
@@ -445,7 +474,20 @@ footer img:active {
 .tarjeta li {
   padding: 0.25rem; /* Pequeña separación entre cada item dentro de la la lista de la sublista */
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tarjeta h2 {
+    font-size: 2rem;
+  }
+  .tarjeta p, .tarjeta li {
+    font-size: 1.7rem;
+  }
+}
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section-index {
+    gap: 3rem;
+  }
+}
 @media (min-width: 1024px) {
   .section-index {
     display: grid;
@@ -479,6 +521,14 @@ footer img:active {
 .tarjeta-nosotros p {
   font-size: 1rem;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tarjeta-nosotros h2 {
+    font-size: 1.75rem;
+  }
+  .tarjeta-nosotros p, .tarjeta-nosotros li {
+    font-size: 1.5rem;
+  }
+}
 
 @media (min-width: 1024px) {
   .section-nosotros {
@@ -500,6 +550,13 @@ footer img:active {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .solicitar-presupuesto {
+    padding: 1.25rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+  }
+}
 .solicitar-presupuesto:hover {
   animation: hover-boton 1s ease-in-out infinite;
 }
@@ -519,6 +576,14 @@ footer img:active {
 }
 .tarjeta-proyectos p {
   font-size: 1rem;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tarjeta-proyectos h2 {
+    font-size: 1.75rem;
+  }
+  .tarjeta-proyectos p {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -552,6 +617,11 @@ footer img:active {
   display: flex;
   text-align: center; /* Centramos el título de la sección de proyectos */
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .titulo-faq {
+    font-size: 2.5rem;
+  }
+}
 
 .tarjeta-faq {
   background-color: #925CF7;
@@ -584,6 +654,17 @@ footer img:active {
   list-style: none;
   font-style: bold;
   font-weight: 400;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tarjeta-faq h2 {
+    font-size: 2.15rem;
+  }
+  .tarjeta-faq ul li {
+    font-size: 1.6rem;
+  }
+  .tarjeta-faq p {
+    font-size: 1.3rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -656,10 +737,12 @@ fieldset {
   flex-wrap: wrap;
   gap: 1rem;
   width: 100%;
+  display: block;
 }
 
 label {
   width: 100%; /* Para que entren 1 label por grilla */
+  display: block;
 }
 
 legend {
@@ -669,6 +752,16 @@ legend {
   margin-bottom: 0.5rem;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  fieldset label, fieldset input, fieldset textarea {
+    width: 100%;
+    display: block;
+  }
+  .boton-form {
+    display: block;
+    margin: 1rem auto 0 auto;
+  }
+}
 @media (min-width: 1024px) {
   .section-contacto {
     display: grid;
@@ -806,6 +899,11 @@ legend {
 .figure-prefooter img {
   border-radius: 1rem; /* Mantenemos el estilo visual */
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .figure-prefooter h2 {
+    font-size: 1.6rem;
+  }
+}
 
 .figure-caption figcaption {
   font-family: "Google Sans", sans-serif;
@@ -816,9 +914,21 @@ legend {
   margin-top: 0.75rem; /* Separamos un poquito la "leyenda" de la figure de entre la imagen y el borde */
   text-align: center; /* Centramos la figcaption por comodidad visual y diseño de la página */
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .figure-caption figcaption {
+    font-size: 1.5rem;
+  }
+}
 
 .faq-boton:hover {
   animation: hover-boton 1s ease-in-out infinite;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .faq-boton {
+    padding: 1.4rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

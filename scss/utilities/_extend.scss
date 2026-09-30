@@ -54,6 +54,11 @@
     padding: 2rem; /* Separamos el contenido de los bordes del contenedor */
 }
 
+%section-contacto-tablet{
+    @include grid (repeat(2, 1fr), auto, "contacto1 contacto2", 1rem);
+    padding: 2rem;
+}
+
 // Tarjetas
 
 %tarjetas-index{

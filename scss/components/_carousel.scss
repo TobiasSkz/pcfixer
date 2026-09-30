@@ -29,7 +29,7 @@
             object-fit: cover;
         }
 
-// Arreglo para versión PC ya que sino el carousel "bumpea" cuando se cambia de foto
+// Arreglo para versión Tablet y PC ya que sino el carousel "bumpea" cuando se cambia de foto
 
         @media (min-width: 1024px) {
         margin: 1.25rem auto;

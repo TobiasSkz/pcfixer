@@ -19,6 +19,12 @@
     img{
         border-radius: 1rem; /* Mantenemos el estilo visual */
     }
+
+    @media (min-width: 768px) and (max-width: 1023px){
+        h2{
+            font-size: 1.6rem;
+        }
+    }
 }
 
 .figure-caption figcaption{
@@ -29,8 +35,23 @@
     font-style: italic;
     margin-top: 0.75rem; /* Separamos un poquito la "leyenda" de la figure de entre la imagen y el borde */
     text-align: center; /* Centramos la figcaption por comodidad visual y diseño de la página */
+
+    @media (min-width: 768px) and (max-width: 1023px){
+        font-size: 1.5rem;
+    }
 }
 
-.faq-boton:hover{
+// Mediaquery para Tablet del botón de "enviar mensaje"
+
+.faq-boton{
+
+    &:hover{
     animation: hover-boton 1s ease-in-out infinite;
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px){
+        padding: 1.4rem;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+    }
 }

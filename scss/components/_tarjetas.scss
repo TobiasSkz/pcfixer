@@ -41,9 +41,25 @@
             li{
                 padding: 0.25rem; /* Pequeña separación entre cada item dentro de la la lista de la sublista */
             }
+
+            @media (min-width: 768px) and (max-width: 1023px){
+                
+                h2{
+                    font-size: 2rem;
+                }
+
+                p, li{
+                    font-size: 1.7rem;
+                }
+            }
         }
 
 .section-index{
+
+    @media (min-width: 768px) and (max-width: 1023px){
+        gap: 3rem;
+    }
+
     @media (min-width: 1024px){
             @include index-pc;
         }
@@ -65,6 +81,16 @@
     p{
         font-size: 1rem;
     }
+
+    @media (min-width: 768px) and (max-width: 1023px){
+        h2{
+            font-size: 1.75rem;
+        }
+
+        p, li{
+            font-size: 1.5rem;
+        }
+    }
 }
 
 .section-nosotros{
@@ -77,8 +103,16 @@
 
 // Animación con keyframes cuando pasamos el cursor por encima del botón de "pedir presupuesto"
 
-.solicitar-presupuesto:hover{
-    animation: hover-boton 1s ease-in-out infinite;
+.solicitar-presupuesto{
+    @media (min-width: 768px) and (max-width: 1023px){
+        padding: 1.25rem;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+    }
+
+    &:hover{
+        animation: hover-boton 1s ease-in-out infinite;
+    }
 }
 
 .tarjeta-proyectos{
@@ -101,6 +135,16 @@
     p{
         font-size: 1rem;
     }
+
+    @media (min-width: 768px) and (max-width: 1023px){
+        h2{
+            font-size: 1.75rem;
+        }
+
+        p{
+            font-size: 1.5rem;
+        }
+    }
 }
 
 .section-proyectos{
@@ -117,6 +161,10 @@
     color: $color-titulos;
     display: flex;
     text-align: center; /* Centramos el título de la sección de proyectos */
+
+    @media (min-width: 768px) and (max-width: 1023px){
+        font-size: 2.5rem;
+    }
 }
 
 .tarjeta-faq{
@@ -154,6 +202,20 @@
             list-style: none;
             font-style: bold;
             font-weight: 400;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px){
+        h2{
+            font-size: 2.15rem;
+        }
+
+        ul li{
+            font-size: 1.6rem;
+        }
+
+        p{
+            font-size: 1.3rem;
         }
     }
 }
@@ -219,11 +281,13 @@ fieldset{
     flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
+    display: block
 }
 
-    label{
-        @extend %form-label;
-        width: 100%; /* Para que entren 1 label por grilla */
+label{
+    @extend %form-label;
+    width: 100%; /* Para que entren 1 label por grilla */
+    display: block;
 }
 
 
@@ -232,6 +296,20 @@ legend{
     width: 100%; /* Para que ocupe toda la primera grilla */
     font-size: 1.15rem;
     margin-bottom: 0.5rem;
+}
+
+// Mediaquery Tablet
+
+@media (min-width: 768px) and (max-width: 1023px){
+    fieldset label, fieldset input, fieldset textarea{
+        width: 100%;
+        display: block;
+    }
+
+    .boton-form{
+        display: block;
+        margin: 1rem auto 0 auto;
+    }
 }
 
 .section-contacto{

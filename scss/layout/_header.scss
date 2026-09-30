@@ -29,7 +29,12 @@ header{
     &:hover{
         transform: $logo;
     }
+
+        @media (min-width: 768px) and (max-width: 1023px) { // Limitamos hasta donde que resolución se va a hacer más grande el logo
+            width: 400px; 
+        }
 }
+
 
 .hamburguesa{
     color: $color-textos;
@@ -37,6 +42,10 @@ header{
     border: 2px solid $color-textos;
     border-radius: 0.5rem;
     font-size: 1.75rem; /* Tamaño de la fuente de nuestro menú - En este caso, del ☰ */
+
+    @media (min-width: 768px) and (max-width: 1023px){
+        font-size: 3rem;
+    }
 }
 
 .link-menu{
@@ -47,6 +56,10 @@ header{
     border-radius: 0.5rem;
     transition: all 0.5s ease;
 
+    @media (min-width: 768px) and (max-width: 1023px){
+        font-size: 2rem;
+        padding: 0.6rem 1rem;
+    }
 
     &:visited{
         color: $color-letras-nav;
