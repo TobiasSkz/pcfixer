@@ -433,6 +433,7 @@ footer img {
 .tarjeta-nosotros {
   background-color: #925CF7;
   width: 100%;
+  height: 95%;
 }
 .tarjeta-nosotros h2 {
   font-size: 1.25rem;
@@ -465,6 +466,7 @@ footer img {
 .tarjeta-proyectos {
   background-color: #925CF7;
   width: 100%;
+  height: 95%;
 }
 .tarjeta-proyectos h2 {
   font-size: 1.25rem;
@@ -513,6 +515,7 @@ footer img {
 .tarjeta-faq {
   background-color: #925CF7;
   width: 100%;
+  height: 90%;
   text-align: center;
 }
 .tarjeta-faq h2 {
@@ -587,6 +590,7 @@ h3 {
 .tarjeta-contacto {
   background-color: #925CF7;
   width: 100%;
+  height: 100%;
   text-align: center;
 }
 

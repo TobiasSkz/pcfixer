@@ -54,6 +54,7 @@
 .tarjeta-nosotros{
     background-color: $color-nav;
     width: 100%;
+    height: 95%; // No le pongo 100% porque sobra demasiado espacio
     @extend %tarjetas-nosotros;
 
     h2{
@@ -77,6 +78,7 @@
 .tarjeta-proyectos{
     background-color: $color-nav;
     width: 100%;
+    height: 95%; // Lo mismo que la de arriba, con 100% sobra demasiado espacio para mi gusto
     @extend %tarjetas-proyectos;
 
 
@@ -114,6 +116,7 @@
 .tarjeta-faq{
     background-color: $color-nav;
     width: 100%;
+    height: 90%; // Lo mismo que antes, en 90% está bien para mi gusto
     @extend %tarjetas-faq;
     text-align: center;
 
@@ -178,6 +181,7 @@
 .tarjeta-contacto{
     background-color: $color-nav;
     width: 100%;
+    height: 100%;
     text-align: center;
     @extend %tarjetas-contacto;
 }
