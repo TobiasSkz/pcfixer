@@ -275,7 +275,7 @@
 // Formulario
 
 fieldset{
-    font-family: 'Google Sans', sans-serif;
+    font-family: $fuente;
     border: none; /* Le sacamos el borde feo que trae por defecto */
     display: flex;
     flex-wrap: wrap;
