@@ -689,22 +689,34 @@ legend {
   border: 1rem solid #925CF7; /* Color de la tarjeta igual al resto de tarjetas */
   border-radius: 1rem; /* Esquinas redondeadas para mantener la estética */
   overflow: hidden;
+  margin: 1rem;
 }
 .tarjeta-carousel h2, .tarjeta-carousel p {
   text-align: center;
 }
-.tarjeta-carousel .carousel-inner, .tarjeta-carousel .carousel-item {
-  height: 600px;
-  overflow: hidden;
-}
+.tarjeta-carousel .carousel,
+.tarjeta-carousel .carousel-inner,
 .tarjeta-carousel .carousel-item {
   width: 100%;
 }
 .tarjeta-carousel img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .tarjeta-carousel {
+    margin: 1.25rem auto;
+    border-width: 1rem;
+  }
+  .tarjeta-carousel .carousel,
+  .tarjeta-carousel .carousel-inner {
+    overflow: hidden;
+  }
+  .tarjeta-carousel img {
+    height: 600px;
+  }
 }
 
 /* Hover de los botones de "anterior" y "siguiente */
