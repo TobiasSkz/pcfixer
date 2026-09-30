@@ -24,6 +24,15 @@ footer {
 
     img {
         width: 3rem;
+        transition: all 0.35s ease;
+
+        &:hover{
+            transform: $footer;
+        }
+
+        &:active{
+            transform: $footer-active;
+        }
     }
     
     @media (min-width: 1024px) {

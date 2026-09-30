@@ -200,6 +200,14 @@ img {
   }
 }
 
+.logo-navbar {
+  transition: all 0.35s ease;
+  transform-origin: center center;
+}
+.logo-navbar:hover {
+  transform: scale(1.1);
+}
+
 .hamburguesa {
   color: #FAFAFA;
   background-color: #28026b; /* Color del interior del menú */
@@ -222,10 +230,10 @@ img {
 .link-menu:hover {
   background-color: #360194;
   color: #FAFAFA;
-  text-decoration: underline;
+  transform: scale(1.1);
 }
-.link-menu:focus {
-  box-shadow: 0.5rem 0.5rem 1rem #311a5a;
+.link-menu:active {
+  transform: scale(0.8);
 }
 
 h1 {
@@ -233,7 +241,7 @@ h1 {
   font-size: 1.75rem;
   color: #FFFFFF;
   text-align: center;
-  margin-top: 1rem; /* Separamos el título principal del nav y de las sections */
+  margin-top: 1.5rem; /* Separamos el título principal del nav y de las sections */
 }
 
 h2 {
@@ -349,6 +357,13 @@ footer p {
 }
 footer img {
   width: 3rem;
+  transition: all 0.35s ease;
+}
+footer img:hover {
+  transform: scale(1.2);
+}
+footer img:active {
+  transform: scale(0.8);
 }
 @media (min-width: 1024px) {
   footer {
