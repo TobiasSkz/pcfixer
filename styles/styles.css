@@ -289,6 +289,12 @@ button:hover {
   background-color: #cfcfcf; /* Color casi transparente para que se note cuando tenes el cursor encima */
 }
 
+.borde-h2 {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+
 .tarjeta1 {
   grid-area: tarjeta1;
 }
@@ -327,6 +333,11 @@ button:hover {
 
 .proyectos4 {
   grid-area: proyectos4;
+}
+
+.section-faq li {
+  margin-top: 0.5rem;
+  font-size: 1.15rem;
 }
 
 .faq1 {
@@ -601,6 +612,10 @@ footer img:active {
 
 .boton-form:hover {
   animation: hover-boton 1s ease-in-out infinite;
+}
+
+.boton-whatsapp {
+  margin-bottom: 1rem;
 }
 
 .titulo-contacto {

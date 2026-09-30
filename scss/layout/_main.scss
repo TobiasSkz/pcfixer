@@ -55,10 +55,17 @@ button:hover{
     background-color: $color-efecto-boton; /* Color casi transparente para que se note cuando tenes el cursor encima */
 }
 
+// Efecto de rectángulo ("Profundidad") en las tarjetas
+
+.borde-h2{
+    background-color: transparent;
+    border: $borde-h2-tarjetas;
+    border-radius: 1rem;
+}
+
 // === SECTIONS ===
 
 // Index
-
 
 .section-index{
     @extend %section-index;
@@ -126,6 +133,11 @@ button:hover{
 
 .section-faq{
     @extend %section-faq;
+
+    li{
+        margin-top: 0.5rem;
+        font-size: 1.15rem;
+    }
 }
 
 // Asignación de áreas
