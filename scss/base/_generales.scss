@@ -1,6 +1,8 @@
 @use "../utilities/variables" as *;
 @use "../utilities/extend" as *;
-@use "../utilities/mixin" as *;  // No usamos extend y mixin pero los llamamos por si a futuro lo necesitamos
+@use "../utilities/mixin" as *;
+@use "../utilities/aninations" as *;
+
 
 body{
     background-color: $fondo-pagina;
