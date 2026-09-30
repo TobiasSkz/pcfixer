@@ -1,3 +1,20 @@
 @use "../utilities/variables" as *;
 @use "../utilities/extend" as *;
 @use "../utilities/mixin" as *;
+
+@keyframes hover-boton{
+
+    0%{
+        box-shadow: none;
+    }
+
+    50%{
+        box-shadow: 0 0 20px 5px $color-efecto-boton;
+    }
+
+    100%{
+        box-shadow: none;
+    }
+
+}
+

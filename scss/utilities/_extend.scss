@@ -109,19 +109,20 @@
 // Figure pre-footer
 
 %figure-prefooter{
-    @include flex(column, null, center, 0.5rem);
+    @include flex(column, null, center, null);
     background-color: $color-nav;
     text-align: center;
     padding: 1.25rem;
     font-weight: 400;
     border-radius: 1rem;
-    margin: 0 1rem 1rem 1rem; /* Separamos el figure del footer y de ambos costados */
+    margin: 0 1rem 1rem 1rem; /* Separamos el figure del footer y de ambos costados */    
 }
 
 // Footer
 
 %footer{
     @include flex(column, center, center, null);
+    margin-top: 1rem;
 }
 
 %footer-ul{

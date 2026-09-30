@@ -137,7 +137,6 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
   background-color: #925CF7;
   text-align: center;
   padding: 1.25rem;
@@ -151,6 +150,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
 }
 
 footer ul {
@@ -163,6 +163,17 @@ footer ul {
   padding-bottom: 1rem; /* Separamos un poquito las redes del borde inferior del footer */
 }
 
+@keyframes hover-boton {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px #cfcfcf;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -478,6 +489,10 @@ footer img:active {
   }
 }
 
+.solicitar-presupuesto:hover {
+  animation: hover-boton 1s ease-in-out infinite;
+}
+
 .tarjeta-proyectos {
   background-color: #925CF7;
   width: 100%;
@@ -530,7 +545,7 @@ footer img:active {
 .tarjeta-faq {
   background-color: #925CF7;
   width: 100%;
-  height: 90%;
+  height: 95%;
   text-align: center;
 }
 .tarjeta-faq h2 {
@@ -547,6 +562,7 @@ footer img:active {
 .tarjeta-faq ul {
   font-size: 1rem;
   list-style-position: disc; /* Para colocar visualmente la sublista dentro de la lista */
+  list-style: none;
   padding-left: 1.25rem;
   margin: 0;
   width: 100%; /* Para que los "puntitos" de la lista ocupen el tamaño de su contenedor y no se salgan para afuera */
@@ -583,13 +599,17 @@ footer img:active {
   }
 }
 
+.boton-form:hover {
+  animation: hover-boton 1s ease-in-out infinite;
+}
+
 .titulo-contacto {
   font-weight: 700;
   font-size: 1.7rem;
   color: #FFFFFF;
   display: flex;
   text-align: center; /* Centramos el título de la sección de proyectos */
-  padding: 0.5rem; /* Separamos el título de los costados */
+  padding-top: 0.5rem;
 }
 
 h2 {
@@ -762,8 +782,8 @@ legend {
 }
 
 .figure-prefooter h2 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem; /* Separamos un poquito el h2 de la imagen del figure */
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem; /* Separamos un poquito el h2 de la imagen del figure */
 }
 .figure-prefooter p {
   margin-bottom: 0.5rem; /* Separamos un poquito el párrafo de la imagen de figure */
@@ -778,8 +798,12 @@ legend {
   font-size: 1rem;
   color: #FAFAFA;
   font-style: italic;
-  margin-top: 0.5rem; /* Separamos un poquito la "leyenda" de la figure de entre la imagen y el borde */
+  margin-top: 0.75rem; /* Separamos un poquito la "leyenda" de la figure de entre la imagen y el borde */
   text-align: center; /* Centramos la figcaption por comodidad visual y diseño de la página */
+}
+
+.faq-boton:hover {
+  animation: hover-boton 1s ease-in-out infinite;
 }
 
 /*# sourceMappingURL=styles.css.map */

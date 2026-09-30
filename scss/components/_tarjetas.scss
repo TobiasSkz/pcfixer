@@ -75,6 +75,12 @@
 
 // Tarjetas de proyectos
 
+// Animación con keyframes cuando pasamos el cursor por encima del botón de "pedir presupuesto"
+
+.solicitar-presupuesto:hover{
+    animation: hover-boton 1s ease-in-out infinite;
+}
+
 .tarjeta-proyectos{
     background-color: $color-nav;
     width: 100%;
@@ -116,7 +122,7 @@
 .tarjeta-faq{
     background-color: $color-nav;
     width: 100%;
-    height: 90%; // Lo mismo que antes, en 90% está bien para mi gusto
+    height: 95%; // Lo mismo que antes, en 95% está bien para mi gusto
     @extend %tarjetas-faq;
     text-align: center;
 
@@ -137,6 +143,7 @@
     ul{
         font-size: 1rem;
         list-style-position: disc; /* Para colocar visualmente la sublista dentro de la lista */
+        list-style: none;
         padding-left: 1.25rem;
         margin: 0;
         width: 100%; /* Para que los "puntitos" de la lista ocupen el tamaño de su contenedor y no se salgan para afuera */
@@ -159,13 +166,17 @@
 
 // Tarjetas de contacto
 
+.boton-form:hover{
+    animation: hover-boton 1s ease-in-out infinite;
+}
+
 .titulo-contacto{
     font-weight: 700;
     font-size: 1.7rem;
     color: $color-titulos;
     display: flex;
     text-align: center; /* Centramos el título de la sección de proyectos */
-    padding: 0.5rem; /* Separamos el título de los costados */
+    padding-top: 0.5rem;
 }
 
     h2{
