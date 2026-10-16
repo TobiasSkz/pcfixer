@@ -10,7 +10,7 @@
 <br>
 
 - Podes visualizar el sitio web en funcionamiento a través del siguiente enlace:
-< [Ver PC Fixer en vivo](https://tobiasskz.github.io/pcfixer/) >
+< [Ver PC Fixer en vivo](https://pcfixer-ar.netlify.app) >
 
 <br>
 
