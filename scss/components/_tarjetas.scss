@@ -281,13 +281,14 @@ fieldset{
     flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
-    display: block
+    display: block;
 }
 
 label{
     @extend %form-label;
-    width: 100%; /* Para que entren 1 label por grilla */
-    display: block;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    align-items: center;
 }
 
 
@@ -298,12 +299,33 @@ legend{
     margin-bottom: 0.5rem;
 }
 
+input, textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid $color-titulos;
+    border-radius: 0.5rem;
+}
+
+.boton-form{
+    width: auto; /* Para que el botón no se estire */
+    margin: 1rem auto;
+    padding-top: 0.5rem;
+    border-radius: 0.5rem;
+}
+
 // Mediaquery Tablet
 
 @media (min-width: 768px) and (max-width: 1023px){
     fieldset label, fieldset input, fieldset textarea{
         width: 100%;
         display: block;
+    }
+
+    fieldset input, fieldset textarea{
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #FFFFFF;
+        border-radius: 0.5rem;
     }
 
     .boton-form{
